@@ -138,6 +138,7 @@ public class ProfileFragment extends Fragment {
 // prueba
     private void saveChanges(FirebaseUser user) {
         String newName = String.valueOf(nameEditText.getText());
+        Uri imagen;
 
         // Verifica si el nombre ha cambiado
         if (!newName.equals(user.getDisplayName())) {
@@ -184,6 +185,7 @@ public class ProfileFragment extends Fragment {
                                             .build();
 
                                     user.updateProfile(profileUpdates)
+
                                             .addOnCompleteListener(new OnCompleteListener<Void>() {
                                                 @Override
                                                 public void onComplete(@NonNull Task<Void> task) {
@@ -192,6 +194,11 @@ public class ProfileFragment extends Fragment {
                                                     }
                                                 }
                                             });
+
+                                    MainActivity mainActivity = (MainActivity) getActivity(); // Obtén una referencia a MainActivity
+                                    if (mainActivity != null) {
+                                        mainActivity.updateNavigationHeaderPhoto(photoUri); // Llama al método de actualización en MainActivity
+                                    }
                                 }
                             });
                         }

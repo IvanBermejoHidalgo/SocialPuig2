@@ -1,5 +1,6 @@
 package com.example.socialpuig;
 
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Menu;
@@ -104,5 +105,14 @@ public class MainActivity extends AppCompatActivity {
         View headerView = navigationView.getHeaderView(0);
         TextView nameTextView = headerView.findViewById(R.id.displayNameTextView);
         nameTextView.setText(newName);
+    }
+
+    public void updateNavigationHeaderPhoto(Uri photoUri) {
+        View headerView = navigationView.getHeaderView(0);
+        ImageView photoImageView = headerView.findViewById(R.id.imageView);
+        Glide.with(this)
+                .load(photoUri)
+                .circleCrop()
+                .into(photoImageView);
     }
 }
