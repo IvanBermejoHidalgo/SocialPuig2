@@ -45,4 +45,9 @@
         android:name="com.example.socialpuig.MediaFragment"
         android:label="fragment_media"
         tools:layout="@layout/fragment_media" />
+    <fragment
+        android:id="@+id/comentarioFragment"
+        android:name="com.example.socialpuig.ComentarioFragment"
+        android:label="fragment_comentario"
+        tools:layout="@layout/fragment_comentario" />
 </navigation>

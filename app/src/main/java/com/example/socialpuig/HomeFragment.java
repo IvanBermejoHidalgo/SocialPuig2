@@ -175,6 +175,18 @@ public class HomeFragment extends Fragment {
             });
 
 
+
+
+            holder.comentariobutton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    // Aquí puedes pasar la información del post seleccionado al fragmento de detalle
+                    Bundle bundle = new Bundle();
+                    bundle.putSerializable("post", post);
+                    navController.navigate(R.id.comentarioFragment, bundle);
+                }
+            });
+
         }
 
 
@@ -182,7 +194,7 @@ public class HomeFragment extends Fragment {
         class PostViewHolder extends RecyclerView.ViewHolder {
             ImageView authorPhotoImageView, likeImageView, mediaImageView, retweetImageView;
             TextView authorTextView, contentTextView, numLikesTextView, dateTextView, numRetweetsTextView;
-            ImageView deletePostImageView;
+            ImageView deletePostImageView, comentariobutton;
             PostViewHolder(@NonNull View itemView) {
                 super(itemView);
 
@@ -196,6 +208,7 @@ public class HomeFragment extends Fragment {
                 numRetweetsTextView = itemView.findViewById(R.id.numRetweetsTextView);
                 dateTextView = itemView.findViewById(R.id.dateTextView);
                 deletePostImageView = itemView.findViewById(R.id.deletePostImageView);
+                comentariobutton = itemView.findViewById(R.id.comentariobutton);
             }
         }
     }

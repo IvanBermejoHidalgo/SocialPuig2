@@ -58,7 +58,7 @@
                     android:id="@+id/numLikesTextView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="4dp"
+                    android:layout_marginStart="2dp"
                     android:layout_gravity="center_vertical"
                     android:text="200K"/>
 
@@ -66,7 +66,7 @@
                     android:id="@+id/retweetImageView"
                     app:srcCompat="@drawable/retweet_on"
                     android:adjustViewBounds="true"
-                    android:layout_marginLeft="5dp"
+                    android:layout_marginLeft="2dp"
                     android:layout_width="25dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"/>
@@ -74,7 +74,7 @@
                     android:id="@+id/numRetweetsTextView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="4dp"
+                    android:layout_marginLeft="1dp"
                     android:layout_gravity="center_vertical"
                     android:text="200K"/>
 
@@ -82,16 +82,24 @@
                     android:id="@+id/dateTextView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="4dp"
+                    android:layout_marginStart="1dp"
                     android:layout_gravity="center_vertical"
                     android:text=" DD/MM/AAAA HH:MM"/>
+                <ImageView
+                    android:id="@+id/comentariobutton"
+                    app:srcCompat="@drawable/comment"
+                    android:adjustViewBounds="true"
+                    android:layout_width="20dp"
+                    android:layout_marginLeft="4dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"/>
 
                 <ImageView
-
                     android:id="@+id/deletePostImageView"
                     app:srcCompat="@drawable/trash"
                     android:adjustViewBounds="true"
                     android:layout_width="20dp"
+                    android:layout_marginLeft="5dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"/>
             </LinearLayout>
