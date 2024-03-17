@@ -149,6 +149,10 @@ public class ProfileFragment extends Fragment {
                     .addOnCompleteListener(task -> {
                         if (task.isSuccessful()) {
                             displayNameTextView.setText(newName);
+                            MainActivity mainActivity = (MainActivity) getActivity(); // Obtén una referencia a MainActivity
+                            if (mainActivity != null) {
+                                mainActivity.updateNavigationHeaderName(newName); // Llama al método de actualización en MainActivity
+                            }
                             Toast.makeText(getContext(), "Nombre actualizado correctamente", Toast.LENGTH_SHORT).show();
 
                             // Actualizar el nombre en Firebase Auth
