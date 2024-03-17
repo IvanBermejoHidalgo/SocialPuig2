@@ -135,7 +135,7 @@ public class ProfileFragment extends Fragment {
             }
         }
     }
-
+// prueba
     private void saveChanges(FirebaseUser user) {
         String newName = String.valueOf(nameEditText.getText());
 
